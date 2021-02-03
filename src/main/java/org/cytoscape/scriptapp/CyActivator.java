@@ -21,7 +21,14 @@ public class CyActivator extends AbstractCyActivator {
 
 		Properties runScriptTaskFactoryProps = new Properties();
 		runScriptTaskFactoryProps.setProperty("preferredMenu","Apps.ScriptAppDemo ");
-		runScriptTaskFactoryProps.setProperty("title","Run Script-App");
+		runScriptTaskFactoryProps.setProperty("title","Run script local");
 		registerService(bc,runScriptTaskFactory,TaskFactory.class, runScriptTaskFactoryProps);
-	}
+
+		OpenNotebookTaskFactory OpenNotebookTaskFactory = new OpenNotebookTaskFactory();
+
+		Properties openNotebookTaskFactoryProps = new Properties();
+		openNotebookTaskFactoryProps.setProperty("preferredMenu","Apps.ScriptAppDemo ");
+		openNotebookTaskFactoryProps.setProperty("title","Open interative notebook");
+		registerService(bc,OpenNotebookTaskFactory,TaskFactory.class, openNotebookTaskFactoryProps);
+}
 }
