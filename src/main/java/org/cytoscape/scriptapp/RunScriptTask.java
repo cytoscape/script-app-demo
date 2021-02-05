@@ -2,25 +2,30 @@ package org.cytoscape.scriptapp;
 
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 
 
 public class RunScriptTask extends AbstractTask {
 	
-	public RunScriptTask() {
+	final private String langpath;
+	final private String scriptpath;
+	
+	public RunScriptTask(String langpath, String scriptpath) {
+		this.langpath = langpath;
+		this.scriptpath = scriptpath;
 		
 	}
 	 
 	public void run(TaskMonitor taskMonitor) {
 		try{
-			String locallang = "/usr/local/bin/python3";
-			String script =  "/Users/alexpico/Desktop/p4c-demo.py";
-
-			Runtime.getRuntime().exec(locallang + " " + script);
+			System.out.println(scriptpath);
+			Runtime.getRuntime().exec(langpath + " " + scriptpath);
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
 	}
+	
 }
 
 	

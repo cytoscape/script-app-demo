@@ -2,7 +2,7 @@ package org.cytoscape.scriptapp;
 
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
-import java.io.*;
+import java.io.IOException;
 
 
 public class OpenNotebookTask extends AbstractTask {

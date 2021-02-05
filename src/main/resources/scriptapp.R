@@ -1,0 +1,10 @@
+# if (!requireNamespace("BiocManager", quietly = TRUE))
+#   install.packages("BiocManager")
+# BiocManager::install("RCy3")
+library(RCy3)
+
+RCy3::openSession()
+RCy3::selectNodes("GAL4", "COMMON")
+RCy3::selectFirstNeighbors()
+RCy3::createSubnetwork("selected")
+RCy3::layoutNetwork("force-directed")
