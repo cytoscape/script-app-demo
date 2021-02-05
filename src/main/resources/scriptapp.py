@@ -7,7 +7,7 @@ import py4cytoscape as p4c
 
 # p4c.cytoscape_version_info()
 
-# p4c.open_session()
+p4c.open_session()
 
 p4c.select_nodes(["MIG1"],"COMMON")
 p4c.select_first_neighbors()
